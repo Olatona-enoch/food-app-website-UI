@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+html{
+    overflow-x: hidden;
+}
 body{
     border: 0;
     margin: 0;
@@ -146,7 +149,7 @@ nav ul a:hover{
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
     body{
         overflow-x: hidden;
     }
@@ -167,21 +170,25 @@ nav ul a:hover{
 /*---------first section--------*/
 .firstsection-wrapper{
     background-image: url(website\ images/Rectangle\ 48.png);
-    height: 619px;
+    background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
     justify-items: center;
     position: relative;
+    max-width: 1440px;
+    width: 100%;
     
 }
 .firstsection{
     max-width: 1005px;
+    width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
     justify-items: center;
     position: relative;
+    justify-self: center;
 }
 .firstsection h3{
     margin-top: 60px;
@@ -248,15 +255,15 @@ nav ul a:hover{
     
 }
 hr{
-    margin-top: 600px;
+    margin-top: 300px;
     padding: 0.5px;
     background-color: grey;
     width: 80%;
     color: grey;
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
     .firstsection-wrapper{
-        background-image:none ;
+        background-image:none;
         background-color: #fafafa;
     }
     .firstsection h3{
@@ -310,6 +317,8 @@ hr{
 /*-------------SECOND SECTION------------*/
 .secondsection-wrapper{
     text-align: center;
+    max-width: 1440px;
+    width: 100%;
     
 }
 .secondsection-wrapper h1{
@@ -322,13 +331,22 @@ hr{
     margin-bottom: 0;
 }
 .secondsection{
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-items: center;
+    justify-self: center;
 }
-.secondsection div{
+.secondsection .info{
     text-align: left;
     width: 568px;
+}
+.secondsection .image img{
+    height: 600px;
+    width: 402px;
+    object-fit: cover;
+    margin-right: 80px;
 }
 .secondsection div h3{
     font-weight: 700;
@@ -351,7 +369,7 @@ hr{
     letter-spacing: 0.2px;
     color: #737373;
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
     .secondsection-wrapper hr{
         width: 100%;
         margin-top: 0;
@@ -375,13 +393,26 @@ hr{
         display: flex;
         flex-direction: column-reverse;
         text-align: center;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        
     }
-    .secondsection img{
-        margin-left: 25%;
-       
+    .secondsection .info{
+        margin-bottom: 50px;
+        width: 357px;
+        height: 406px;
     }
-    .secondsection div{
-        width: 392px;
+    .secondsection .image{
+        text-align: center;
+        width: 650px;
+        height: 581px;
+    }
+    .secondsection .image img{
+        width: 650px;
+        height: 581px;
+        object-fit: scale-down;
+        margin-right: 0;
     }
     .secondsection h3{
         text-align: center;
@@ -400,10 +431,6 @@ hr{
         letter-spacing: 0.2px;
         text-align: center;
     }
-    .secondsection div{
-        width: 357px;
-        height: 406px;
-    }
     
 }
 /*--------------Third section----------*/
@@ -411,40 +438,54 @@ hr{
     text-align: center;
     align-items: center;
     justify-content: center;
+    max-width: 1440px;
+    width: 100%;
 }
 .thirdsection{
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.thirdsection div{
+.thirdsection .info{
     text-align: left;
     width: 568px;
-    margin-left:15% ;
-    margin-right: 40px;
+    height: 280px;
+    /*margin-left:15% ;*/
+    /*margin-right: 40px;*/
 }
-.thirdsection div h3{
+.thirdsection .info h3{
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
     letter-spacing: 0.1px;
     color: #fa4a0c;
 }
-.thirdsection div h2{
+.thirdsection .info h2{
     font-weight: 700;
     font-size: 40px;
     line-height: 57px;
     letter-spacing: 0.2px;
     color: #252B42;
+    width: 480px;
+    height: 114px;
 }
-.thirdsection div h4{
+.thirdsection .info h4{
     font-weight: 500;
     font-size: 24px;
     line-height: 38px;
     letter-spacing: 0.2px;
     color: #737373;
 }
-@media screen and (max-width:500px) {
+.thirdsection .image img{
+   /* width: 269px;
+    height: 525px;
+    object-fit: cover;*/
+    height: 600px;
+    width: 402px;
+    object-fit: cover;
+}
+@media screen and (max-width:600px) {
     .thirdsection-wrapper{
         text-align: center;
         align-items: center;
@@ -457,17 +498,27 @@ hr{
         text-align: center;
         align-items: center;
         justify-content: center;
+        justify-items: center;
     }
-    .thirdsection img{
-        margin-left: 22%;
-       
-    }
-    .thirdsection div{
-        margin-left: 12%;
-        width: 347px;
-        height: 320px;
+    .thirdsection .info{
         text-align: center;
         justify-items: center;
+        margin-bottom: 120px;
+    }
+    .thirdsection .info h2{
+        width: 327px;
+        height: 171px;
+    }
+
+    .thirdsection .image{
+        justify-items: center;
+        align-self: center;
+        align-content: center;
+    }
+    .thirdsection .image img{
+        width: 650px;
+        height: 581px;
+        object-fit: scale-down;
     }
     .thirdsection h3{
         text-align: center;
@@ -484,75 +535,105 @@ hr{
 /*-----------Fourth section-----------*/
 .fourthsection-wrapper{
     text-align: center;
+    max-width: 1440px;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
 }
 .fourthsection{
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-self: center;
 }
-.fourthsection div{
+.fourthsection .info{
     text-align: left;
     width: 568px;
+    height: 280px;
 }
-.fourthsection div h3{
+.fourthsection .info h3{
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
     letter-spacing: 0.1px;
     color: #fa4a0c;
 }
-.fourthsection div h2{
+.fourthsection .info h2{
     font-weight: 700;
     font-size: 40px;
     line-height: 57px;
     letter-spacing: 0.2px;
     color: #252B42;
 }
-.fourthsection div h4{
+.fourthsection .info h4{
     font-weight: 500;
     font-size: 24px;
     line-height: 38px;
     letter-spacing: 0.2px;
     color: #737373;
+    width: 460px;
+    height: 76px;
+
 }
-@media screen and (max-width:500px) {
+.fourthsection .image img{
+    /*height: 511px;
+    width: 278px;
+    object-fit: cover;*/
+    height: 600px;
+    width: 402px;
+    object-fit: cover;
+    margin-right: 80px;
+}
+@media screen and (max-width:600px) {
     .fourthsection{
         display: flex;
         flex-direction: column-reverse;
         text-align: center;
     }
-    .fourthsection img{
-        margin-left: 15%;
-       
-    }
-    .fourthsection div{
+    .fourthsection .info{
         width: 336px;
         height: 411px;
         justify-items: center;
+        margin-bottom: 50px;
     }
-    .fourthsection div h3{
+    .fourthsection .info h3{
         width: 123px;
         text-align: center;
     }
-    .fourthsection div h2{
+    .fourthsection .info h2{
         width: 310px;
         text-align: center;
     }
-    .fourthsection div h4{
+    .fourthsection .info h4{
         text-align: center;
         width: 257px;
+    }
+    .fourthsection .image{
+        text-align: center;
+        width: 650px;
+        height: 581px;
+    }
+    .fourthsection .image img{
+        width: 650px;
+        height: 581px;
+        object-fit: scale-down;
+        margin-right: 0;
     }
 
     
 }
 /*-------------fifth section------------*/
 .fifthsection-wrapper{
+    margin-top: 50px;
     background-image: url(website\ images/Rectangle\ 47.png);
     justify-content: center;
     align-items: center;
     justify-items: center;
     text-align: center;
     height: 509px;
+    max-width: 1440px;
+    width: 100%;
 }
 .fifthsection{
     margin-top: 150px;
@@ -603,7 +684,7 @@ hr{
     border: 0;
     background-color: #fa4a0c;
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
     .fifthsection-wrapper{
         width: 100%;
         background-image: none;
@@ -670,7 +751,7 @@ footer div{
        width: 100%;
     }   
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
     .footer-wrapper{
         justify-items: center;
         display: flex;
